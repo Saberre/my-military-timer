@@ -19,8 +19,6 @@ export default class extends React.Component {
     let mins = Math.floor(diff / 60 % 60);
     let hours = Math.floor(diff / 60 / 60 % 24);
     let days = Math.floor(diff / 60 / 60 / 24);
-    console.log(target);
-    console.log(this.state);
     return <div className="timer">{message}<br />{days}일 {hours}시간 {mins}분 {secs}초</div>;
   }
 }
