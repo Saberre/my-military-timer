@@ -1,5 +1,5 @@
 import React from 'react';
-import './timer.less';
+import styles from './timer.less';
 
 export default class extends React.Component {
   constructor() {
@@ -19,6 +19,6 @@ export default class extends React.Component {
     let mins = Math.floor(diff / 60 % 60);
     let hours = Math.floor(diff / 60 / 60 % 24);
     let days = Math.floor(diff / 60 / 60 / 24);
-    return <div className="timer">{message}<br />{days}일 {hours}시간 {mins}분 {secs}초</div>;
+    return <div className={styles.wrapper}><div className={styles.timer}>{message}<br />{days}일 {hours}시간 {mins}분 {secs}초</div></div>;
   }
 }
