@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './timer.less';
 
-function Message(props) {
+function Message({ message }) {
   return (<div>
-    {props.message}
+    {message}
   </div>);
 }
 
@@ -29,9 +29,9 @@ class Counter extends React.Component {
   }
 }
 
-export default function (props) {
+export default function Timer({ message, target }) {
   return (<div className={styles.wrapper}><div className={styles.timer}>
-    <Message message={props.message} />
-    <Counter target={props.target} />
+    <Message message={message} />
+    <Counter target={target} />
   </div></div>);
 }
