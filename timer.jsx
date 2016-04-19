@@ -10,13 +10,14 @@ function Message({ message }) {
 class Counter extends React.Component {
   constructor() {
     super();
+    this._update = this._update.bind(this);
     this.state = {time: Date.now()};
   }
   _update() {
     this.setState({time: Date.now()});
   }
   componentDidMount() {
-    setInterval(this._update.bind(this), 1000);
+    setInterval(this._update, 1000);
   }
   render() {
     const { props: { target }} = this;
