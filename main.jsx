@@ -7,7 +7,7 @@ import './main.less';
 
 
 ReactDOM.render(
-  <Timer message="소집해제까지" target={new Date(2016, 5 - 1, 25, 0, 0, 0, 0).getTime()} />,
+  <Timer message="소집해제까지" target={Date.UTC(2016, 5 - 1, 24, 15, 0, 0, 0)} />,
   document.getElementById('app')
 );
 
